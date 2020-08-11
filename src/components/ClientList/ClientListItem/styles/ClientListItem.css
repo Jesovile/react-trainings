@@ -1,0 +1,16 @@
+.ClientListItem {
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+.ClientListItem:hover {
+    background-color: aliceblue;
+}
+
+.ClientListItem > * {
+    display: inline-block;    
+}
+
+.ClientListItem > *:not(:last-child) {
+    padding-right: 20px;
+}
