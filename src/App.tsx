@@ -6,6 +6,7 @@ import Navigation from './components/Navigation/Navigation';
 import Container from './components/Container/Container';
 import Wrapper from './components/Wrapper/Wrapper';
 import AgentCard from './components/AgentCard/AgentCard';
+import RenderProps from './components/RenderProps/RenderProps';
 
 interface AppState {
   currentTab: NavigationTabs;
@@ -43,6 +44,15 @@ class App extends React.Component<{}, AppState> {
             agentStatus={this.User.status}
           />
         </Wrapper>
+      );
+      case NavigationTabs.RENDER_PROPS: return (
+        <RenderProps agentCard={
+          <AgentCard
+            agentName={this.User.name}
+            agentAge={this.User.age}
+            agentStatus={this.User.status}
+          />
+        }/>
       );
       default: return null;
     }

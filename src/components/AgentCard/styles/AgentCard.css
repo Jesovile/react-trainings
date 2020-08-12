@@ -4,3 +4,9 @@
     padding: 20px;
     border: 1px solid black;
 }
+
+.AgentCard--disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    user-select: none;
+}
