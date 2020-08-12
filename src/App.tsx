@@ -7,6 +7,7 @@ import Container from './components/Container/Container';
 import Wrapper from './components/Wrapper/Wrapper';
 import AgentCard from './components/AgentCard/AgentCard';
 import RenderProps from './components/RenderProps/RenderProps';
+import FuncChildren from './components/FuncChildren/FuncChildren';
 
 interface AppState {
   currentTab: NavigationTabs;
@@ -37,7 +38,7 @@ class App extends React.Component<{}, AppState> {
       case NavigationTabs.LIST: return <ClientList/>;
       case NavigationTabs.CONTAINER: return <Container/>;
       case NavigationTabs.WRAPPER: return (
-        <Wrapper isActive>
+        <Wrapper isActive={false}>
           <AgentCard
             agentName={this.User.name}
             agentAge={this.User.age}
@@ -53,6 +54,18 @@ class App extends React.Component<{}, AppState> {
             agentStatus={this.User.status}
           />
         }/>
+      );
+      case NavigationTabs.FUNC_CHILDREN: return (
+        <FuncChildren>
+          {(isDisabled) => (
+            <AgentCard
+            agentName={this.User.name}
+            agentAge={this.User.age}
+            agentStatus={this.User.status}
+            isDisabled={isDisabled}
+            />
+          )}
+        </FuncChildren>
       );
       default: return null;
     }
