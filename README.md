@@ -1,7 +1,13 @@
-## Записка для того, чтобы ззапустить
+## Записка для того, чтобы запустить
 в корне проекта выполнить последовательно
 npm install
 npm start
+
+### Ветки
+- master - простая имплементация простого компонента на Реакт
+- component-patterns - имплементация паттернов взаимодействия компонентов Container, Wrapper, RenderProps и Children-as-a-function
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
