@@ -10,6 +10,8 @@
     padding: 12px;
     text-align: center;
     border-right: 1px solid black;
+    cursor: pointer;
+    user-select: none;
 }
 
 .Navigation > *:first-child {

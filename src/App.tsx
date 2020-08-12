@@ -3,6 +3,7 @@ import ClientList from "./components/ClientList/ClientList";
 import './App.css';
 import { NavigationTabs } from './types';
 import Navigation from './components/Navigation/Navigation';
+import Container from './components/Container/Container';
 
 interface AppState {
   currentTab: NavigationTabs;
@@ -28,6 +29,7 @@ class App extends React.Component<{}, AppState> {
   private readonly renderContent = (currentTab: NavigationTabs) => {
     switch (currentTab) {
       case NavigationTabs.LIST: return <ClientList/>;
+      case NavigationTabs.CONTAINER: return <Container/>;
       default: return null;
     }
   };
