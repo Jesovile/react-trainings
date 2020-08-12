@@ -25,7 +25,7 @@ export default class ClientList extends React.Component<{}, ClientListState> {
     componentDidMount() {
         console.log("ClientList MOUNT");
         // имитация асинхронного запроса к бэку
-        setTimeout(() => this.setState({clients: clientList(5)}), 1000);
+        setTimeout(() => this.setState({clients: clientList(5)}));
     }
 
     componentDidUpdate(prevProps, prevState) {

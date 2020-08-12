@@ -1,0 +1,21 @@
+.Navigation {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid black;
+}
+
+.Navigation > * {
+    margin: 0;
+    padding: 12px;
+    text-align: center;
+    border-right: 1px solid black;
+}
+
+.Navigation > *:first-child {
+    border-left: 1px solid black;
+}
+
+.Navigation >*:hover {
+    background-color: aliceblue;
+}
