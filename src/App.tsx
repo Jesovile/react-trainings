@@ -4,6 +4,8 @@ import './App.css';
 import { NavigationTabs } from './types';
 import Navigation from './components/Navigation/Navigation';
 import Container from './components/Container/Container';
+import Wrapper from './components/Wrapper/Wrapper';
+import AgentCard from './components/AgentCard/AgentCard';
 
 interface AppState {
   currentTab: NavigationTabs;
@@ -20,6 +22,9 @@ class App extends React.Component<{}, AppState> {
     this.state = {currentTab: NavigationTabs.LIST};
   }
 
+  /*CONSTANTS*/
+  private readonly User = {name: "Eithan Hunt", age: "40", status: "Agent"};
+
   /*HANDLERS*/
   private readonly changeNavTab = (newTab: NavigationTabs) => {
     this.setState({currentTab: newTab});
@@ -30,6 +35,15 @@ class App extends React.Component<{}, AppState> {
     switch (currentTab) {
       case NavigationTabs.LIST: return <ClientList/>;
       case NavigationTabs.CONTAINER: return <Container/>;
+      case NavigationTabs.WRAPPER: return (
+        <Wrapper isActive>
+          <AgentCard
+            agentName={this.User.name}
+            agentAge={this.User.age}
+            agentStatus={this.User.status}
+          />
+        </Wrapper>
+      );
       default: return null;
     }
   };

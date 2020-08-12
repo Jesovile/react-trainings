@@ -1,0 +1,10 @@
+.Wrapper {
+    max-width: min-content;
+    margin-bottom: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Wrapper--active {
+    border: 2px dashed royalblue;
+}
