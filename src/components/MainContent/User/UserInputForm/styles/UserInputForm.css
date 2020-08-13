@@ -1,0 +1,25 @@
+.UserInputForm {
+    max-width: 300px;
+    padding: 12px;
+    border: 1px solid black;    
+}
+
+.UserInputForm > * {
+    width: 100%;
+    display: flex;
+}
+
+.UserInputForm > *:not(:last-child) {
+    padding-bottom: 5px;
+}
+
+.UserInputForm_label {
+    display: block;
+    flex: 0 0 30%;
+    text-align: left;
+}
+
+.UserInputForm_input {
+    display: block;
+    flex-grow: 1;
+}

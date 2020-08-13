@@ -1,0 +1,26 @@
+.UserReview {
+    max-width: 300px;
+    padding: 12px;
+    border: 1px solid black;  
+}
+
+.UserReview > * {
+    width: 100%;
+    display: flex;
+}
+
+.UserReview > *:not(:last-child) {
+    padding-bottom: 5px;
+}
+
+.UserReview_label {
+    display: block;
+    flex: 0 0 30%;
+    text-align: left;
+}
+
+.UserReview_info {
+    margin: 0;
+    display: block;
+    flex-grow: 1;
+}
