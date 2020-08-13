@@ -3,6 +3,8 @@ import "./styles/UserInputForm.css";
 import { connect } from "react-redux";
 import { UserActionTypes, UserAction } from "../../../../redux/substores/User/userActions";
 
+/*В интерфейсе пропсов описывается функция, которая придет из стора и будет содержать логику диспатча экшна
+Эта функция - способ пробросить в редакс экшн и изменить стор*/
 interface UserInputFormProps {
     updateUser: (user) => void;
 }
@@ -38,11 +40,18 @@ const UserInputForm: React.FC<UserInputFormProps> = (props) => {
     );
 };
 
+/*connect - стандартная функция из react-redux, которая подключает компонент к стору
+После этого компонент получает возможность получать в свои пропсы данные из редакс-стора,
+а также использовать функцию dispatch(), которая выстреливает в стор объект Экшна из своего параметра*/
 export default connect(
-    null, // mapStateToProps
+    // mapStateToProps не используется (компонент не принимает данные из стора, только отправляет)
+    null,
+    // mapDispatchToProps - функция, получающая в параметр редаксовскую функцию dispatch для проброски в стор объекта Экшна
+    // возвращает объект маппинга <имя_пропса>: <лямбда_вызывающая_dispatch>
     (dispatch) => {
-        return {
-            updateUser: (user) => dispatch(new UserAction(UserActionTypes.UPDATE_USER, user))
+        return {      
+            // {type: UserActionTypes.UPDATE_USER, payload: newUser} - объект нового экшна      
+            updateUser: (newUser) => dispatch({type: UserActionTypes.UPDATE_USER, payload: newUser})
         }
-    } // mapDispatchToProps
+    }
 )(UserInputForm);

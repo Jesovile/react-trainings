@@ -1,0 +1,26 @@
+.TaskReview {
+    max-width: 300px;
+    padding: 12px;
+    border: 1px solid black;
+}
+
+.TaskReview > * {
+    width: 100%;
+    display: flex;
+}
+
+.TaskReview > *:not(:last-child) {
+    padding-bottom: 5px;
+}
+
+.TaskReview_label {
+    display: block;
+    flex: 0 0 30%;
+    text-align: left;
+}
+
+.TaskReview_info {
+    margin: 0;
+    display: block;
+    flex-grow: 1;
+}

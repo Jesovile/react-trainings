@@ -1,0 +1,25 @@
+.TaskInputForm {
+    max-width: 300px;
+    padding: 12px;
+    border: 1px solid black;
+}
+
+.TaskInputForm > * {
+    width: 100%;
+    display: flex;
+}
+
+.TaskInputForm > *:not(:last-child) {
+    padding-bottom: 5px;
+}
+
+.TaskInputForm_label {
+    display: block;
+    flex: 0 0 30%;
+    text-align: left;
+}
+
+.TaskInputForm_input {
+    display: block;
+    flex-grow: 1;
+}
