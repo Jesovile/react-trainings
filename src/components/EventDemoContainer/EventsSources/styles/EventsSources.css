@@ -1,0 +1,13 @@
+.EventsSources {
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid black;
+}
+
+.EventsSources > * {
+    display: block;    
+}
+
+.EventsSources > *:not(:last-child) {
+    margin-bottom: 12px;
+}

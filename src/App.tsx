@@ -1,6 +1,7 @@
 import React from 'react';
-import ClientList from "./components/ClientList/ClientList";
+// import ClientList from "./components/ClientList/ClientList";
 import './App.css';
+import EventDemoContainer from './components/EventDemoContainer/EventDemoContainer';
 
 /*Корневой компонент прилжения.
 Стартовая точка реактового виртуал-дома.
@@ -13,7 +14,8 @@ function App() {
         <h2>Hello From React</h2>
       </header>
       <main>
-        <ClientList/>
+        {/* <ClientList/> */}
+        <EventDemoContainer/>
       </main>
     </div>
   );
